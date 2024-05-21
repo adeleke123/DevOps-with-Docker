@@ -15,8 +15,10 @@ docker ps -a
 
 # output
 
-CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS      NAMES
-abc123         nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 1 minute ago               container1
-def456         nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 1 minute ago               container2
-ghi789         nginx     "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes               80/tcp     container3
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                      PORTS     NAMES
+90f0286f4527   nginx     "/docker-entrypoint.…"   5 minutes ago   Up 5 minutes                80/tcp    container3
+0315ad245c34   nginx     "/docker-entrypoint.…"   5 minutes ago   Exited (0) 13 seconds ago             container2
+0fb7eaf58d7c   nginx     "/docker-entrypoint.…"   8 minutes ago   Exited (0) 16 seconds ago             container1
+
+
 
