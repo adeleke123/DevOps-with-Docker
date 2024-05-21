@@ -25,3 +25,23 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS        
 
 EXERCISE 1.2: CLEANUP
 ------------------------------
+# Verify existing containers and images
+docker ps -a
+docker image ls
+
+# Remove all containers
+docker rm -f container1 container2 container3
+
+# Remove all images
+docker image rm e784f4560448 -f
+
+# Verify cleanup
+docker ps -a
+
+# output
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+docker image ls
+# output
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
