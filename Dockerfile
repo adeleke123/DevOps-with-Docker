@@ -97,5 +97,48 @@ helsinki.fi
 Searching..
 
 
+EXERCISE 1.5: SIZES OF IMAGES
+---------------------------------
+
+# Step 1: Pull Both Images
+# First, pull the Ubuntu-based and Alpine-based images of devopsdockeruh/simple-web-service.
+
+docker pull devopsdockeruh/simple-web-service:ubuntu
+docker pull devopsdockeruh/simple-web-service:alpine
+
+# Step 2: Compare the Image Sizes
+# List all Docker images to compare their sizes:
+
+docker image ls
+
+# output
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+ubuntu                              latest    bf3dc08bfed0   3 weeks ago   76.2MB
+ubuntu                              22.04     52882761a72a   3 weeks ago   77.9MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   3 years ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   3 years ago   15.7MB
+
+# Step 3: Verify Functionality in the Alpine Container
+
+
+
+/usr/src/app # tail -f /usr/src/app/text.log
+2024-05-21 15:41:27 +0000 UTC
+2024-05-21 15:41:29 +0000 UTC
+2024-05-21 15:41:31 +0000 UTC
+2024-05-21 15:41:33 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 15:41:35 +0000 UTC
+2024-05-21 15:41:37 +0000 UTC
+2024-05-21 15:41:39 +0000 UTC
+2024-05-21 15:41:41 +0000 UTC
+2024-05-21 15:41:43 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 15:41:45 +0000 UTC
+2024-05-21 15:41:47 +0000 UTC
+2024-05-21 15:41:49 +0000 UTC
+2024-05-21 15:41:51 +0000 UTC
+2024-05-21 15:41:53 +0000 UTC
+
 
 
