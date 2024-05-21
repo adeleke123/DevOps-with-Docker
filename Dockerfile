@@ -35,13 +35,15 @@ docker rm -f container1 container2 container3
 # Remove all images
 docker image rm e784f4560448 -f
 
-# Verify cleanup
+# Verify containers cleanup
 docker ps -a
 
 # output
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
+# Verify image cleanup
 docker image ls
+
 # output
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 
