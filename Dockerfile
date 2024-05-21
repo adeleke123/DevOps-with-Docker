@@ -74,5 +74,28 @@ Secret message is: 'You can find the source code here: https://github.com/docker
 2024-05-21 12:18:13 +0000 UTC
 2024-05-21 12:18:15 +0000 UTC
 
+EXERCISE 1.4: MISSING DEPENDENCIES
+-----------------------------------
+
+# Start the container:
+docker run -it ubuntu sh -c "while true; do echo 'Input website:'; read website; echo 'Searching..'; sleep 1; curl http://\$website; done"
+
+# Find the container ID:
+docker ps
+
+# Access the running container: in another terminal
+docker exec -it <container_id> /bin/bash
+
+# Install curl inside the container:
+apt-get update
+apt-get install -y curl
+
+# Return to the original terminal and test the application by entering helsinki.fi when prompted:
+
+Input website:
+helsinki.fi
+Searching..
+
+
 
 
