@@ -47,3 +47,35 @@ docker image ls
 # output
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 
+
+EXERCISE 1.3: SECRET MESSAGE
+-------------------------------------
+# Pull the Image:
+docker pull devopsdockeruh/simple-web-service:ubuntu
+
+# Run the Container: Start a container from this image in detached mode, so it runs in the background.
+docker run -d --name web-service devopsdockeruh/simple-web-service:ubuntu
+
+# Access the Running Container: Use docker exec to get inside the running container. 
+This command allows you to run commands inside an existing container.
+
+docker exec -it web-service /bin/bash
+
+# Follow the Logs: Once inside the container, use the tail command to follow the logs and see the secret message. 
+The -f option will continuously output new lines added to the file.
+
+tail -f ./text.log
+
+# Expected Output:
+
+root@c6188c1f6de8:/usr/src/app# tail -f ./text.log
+2024-05-21 12:18:05 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 12:18:07 +0000 UTC
+2024-05-21 12:18:09 +0000 UTC
+2024-05-21 12:18:11 +0000 UTC
+2024-05-21 12:18:13 +0000 UTC
+2024-05-21 12:18:15 +0000 UTC
+
+
+
