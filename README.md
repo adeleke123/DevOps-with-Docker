@@ -53,3 +53,19 @@
 - This time return the command you used to start process and the command(s) you used to fix the ensuing problems.
 - Hint for installing the missing dependencies you could start a new process with docker exec.
 - This exercise has multiple solutions, if the curl for helsinki.fi works then it's done. Can you figure out other (smart) solutions?
+
+**EXERCISE 1.5: SIZES OF IMAGES**
+
+- In the Exercise 1.3 we used `devopsdockeruh/simple-web-service:ubuntu`.
+- Here is the same application but instead of Ubuntu is using [Alpine Linux](https://www.alpinelinux.org/): `devopsdockeruh/simple-web-service:alpine`.
+- Pull both images and compare the image sizes.
+- Go inside the Alpine container and make sure the secret message functionality is the same.
+- Alpine version doesn't have `bash` but it has `sh`, a more bare-bones shell.
+
+**EXERCISE 1.6: HELLO DOCKER HUB**
+
+- Run `docker run -it devopsdockeruh/pull_exercise`.
+- The command will wait for your input.
+- Navigate through the [Docker hub](https://hub.docker.com/) to find the docs and Dockerfile that was used to create the image.
+- Read the Dockerfile and/or docs to learn what input will get the application to answer a "secret message".
+- Submit the secret message and command(s) given to get it as your answer.
