@@ -1,3 +1,6 @@
+EXERCISE 1.1: GETTING STARTED
+---------------------------------
+
 # Start 3 detached Containers:
 
 docker run -d --name container1 ngnix
@@ -20,5 +23,5 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS        
 0315ad245c34   nginx     "/docker-entrypoint.…"   5 minutes ago   Exited (0) 13 seconds ago             container2
 0fb7eaf58d7c   nginx     "/docker-entrypoint.…"   8 minutes ago   Exited (0) 16 seconds ago             container1
 
-
-
+EXERCISE 1.2: CLEANUP
+------------------------------
