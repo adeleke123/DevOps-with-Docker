@@ -119,8 +119,13 @@ devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   3 years ago   83MB
 devopsdockeruh/simple-web-service   alpine    fd312adc88e0   3 years ago   15.7MB
 
 # Step 3: Verify Functionality in the Alpine Container
+# Start the Alpine-based container:
+docker run -d --name alpine-web-service devopsdockeruh/simple-web-service:alpine
 
+# Access the running container:
+docker exec -it alpine-web-service sh
 
+# Verify the secret message functionality:
 
 /usr/src/app # tail -f /usr/src/app/text.log
 2024-05-21 15:41:27 +0000 UTC
@@ -134,11 +139,6 @@ Secret message is: 'You can find the source code here: https://github.com/docker
 2024-05-21 15:41:41 +0000 UTC
 2024-05-21 15:41:43 +0000 UTC
 Secret message is: 'You can find the source code here: https://github.com/docker-hy'
-2024-05-21 15:41:45 +0000 UTC
-2024-05-21 15:41:47 +0000 UTC
-2024-05-21 15:41:49 +0000 UTC
-2024-05-21 15:41:51 +0000 UTC
-2024-05-21 15:41:53 +0000 UTC
 
 
 
