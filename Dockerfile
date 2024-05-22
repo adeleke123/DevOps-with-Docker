@@ -142,6 +142,33 @@ Secret message is: 'You can find the source code here: https://github.com/docker
 
 EXERCISE 1.6: HELLO DOCKER HUB
 -----------------------------------
+# Pull the Image
+docker pull devopsdockeruh/pull_exercise:latest
+
+# Run the Container
+docker run -it devopsdockeruh/pull_exercise:latest
+
+# Run the container in an interactive shell:
+
+docker run -it --entrypoint sh devopsdockeruh/pull_exercise:latest
+/usr/app #
+/usr/app # ls
+Dockerfile  README.md   index.js
+/usr/app # cat README.md
+This is the readme, use input "basics" to complete this exercise.
+/usr/app # 
+
+# OR Check Docker Hub
+# Navigate to Docker Hub and search for devopsdockeruh/pull_exercise. 
+# The page should have a description or documentation that provides hints or the password.
+
+docker run -it devopsdockeruh/pull_exercise:latest
+Give me the password: basics
+You found the correct password. Secret message is:
+"This is the secret message"
+
+
+
 
 
 
