@@ -140,5 +140,9 @@ Secret message is: 'You can find the source code here: https://github.com/docker
 2024-05-21 15:41:43 +0000 UTC
 Secret message is: 'You can find the source code here: https://github.com/docker-hy'
 
+EXERCISE 1.6: HELLO DOCKER HUB
+-----------------------------------
+
+
 
 
