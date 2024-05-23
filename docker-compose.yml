@@ -167,7 +167,60 @@ Give me the password: basics
 You found the correct password. Secret message is:
 "This is the secret message"
 
+EXERCISE 1.7: IMAGE FOR SCRIPT
+--------------------------------
+# Dockerfile:
+# Use the official Ubuntu 22.04 as the base image
+FROM ubuntu:22.04
 
+# Install curl
+RUN apt-get update && apt-get install -y curl
+
+# Copy the script into the Docker image
+COPY script.sh /usr/local/bin/script.sh
+
+# Give execution permissions to the script
+RUN chmod a+x /usr/local/bin/script.sh
+
+# Set the script as the entrypoint
+CMD ["/usr/local/bin/script.sh"]
+
+# script.sh:
+#!/bin/sh
+
+while true
+do
+  echo "Input website:"
+  read website
+  echo "Searching.."
+  sleep 1
+  curl http://$website
+
+# Build the Docker Image
+# Use the docker build command to create a Docker image from your Dockerfile.
+docker build -t curler .
+
+# Run the Docker Container
+# Use the docker run command to start a container from the built image.
+docker run -it curler
+
+# Test the Functionality
+# When the container starts, it should prompt you to input a website URL. 
+# Enter a website URL to verify if the script works correctly. For example:
+
+adeleke@machine:~/DevOps/DevOps-with-Docker$ sudo docker run -it curler
+[sudo] password for adeleke: 
+Input website:
+helsinki.fi
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.22.1</center>
+</body>
+</html>
+Input website:
 
 
 
