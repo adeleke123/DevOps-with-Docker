@@ -209,7 +209,6 @@ docker run -it curler
 # Enter a website URL to verify if the script works correctly. For example:
 
 adeleke@machine:~/DevOps/DevOps-with-Docker$ sudo docker run -it curler
-[sudo] password for adeleke: 
 Input website:
 helsinki.fi
 Searching..
