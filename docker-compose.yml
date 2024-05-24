@@ -273,3 +273,33 @@ mkdir -p ~/logs
 
 docker run -d -v ~/logs/text.log:/usr/src/app/text.log devopsdockeruh/simple-web-service
 
+EXERCISE 1.10: PORTS OPEN
+---------------------------
+# Run the Docker Container with Port Mapping
+docker run -d -p 8080:8080 devopsdockeruh/simple-web-service server
+-d: Runs the container in detached mode (in the background).
+-p 8080:8080: Maps port 8080 on your host machine to port 8080 in the container.
+devopsdockeruh/simple-web-service server: Specifies the image and the argument to start the web service.
+
+# Check if the Container is Running
+
+docker ps
+adeleke@machine:~$ sudo docker ps
+CONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+2e917b83efc6   devopsdockeruh/simple-web-service   "/usr/src/app/server…"   5 seconds ago    Up 3 seconds    0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   youthful_nightingale
+
+# Access the Web Service in the Browser
+`json`
+
+{ "message": "You connected to the following path: ..." }
+
+# Command to Submit
+
+docker run -d -p 8080:8080 devopsdockeruh/simple-web-service server
+
+This command starts the devopsdockeruh/simple-web-service container, 
+runs the web service on port 8080 and 
+maps that port to port 8080 on your host machine so that you can access it via your browser.
+
+
+
