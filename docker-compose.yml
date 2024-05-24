@@ -305,13 +305,13 @@ maps that port to port 8080 on your host machine so that you can access it via y
 EXERCISE 1.11: SPRING
 ----------------------
 
-# Step-by-Step Guide
-Base Image: We'll use the Amazon Corretto 8 image, as the project requires Java 8.
-Working Directory: Set up a working directory within the container.
-Copy Files: Copy the Maven wrapper, Maven configuration, and project source code into the container.
-Install Maven Dependencies and Build the Project: Use Maven to build the project.
-Expose Port: Expose port 8080, as the application runs on this port.
-Run the Application: Use the java -jar command to run the built JAR file.
+# Step by Step Guide
+- Base Image: We'll use the Amazon Corretto 8 image, as the project requires Java 8.
+- Working Directory: Set up a working directory within the container.
+- Copy Files: Copy the Maven wrapper, Maven configuration, and project source code into the container.
+- Install Maven Dependencies and Build the Project: Use Maven to build the project.
+- Expose Port: Expose port 8080, as the application runs on this port.
+- Run the Application: Use the java -jar command to run the built JAR file.
 
 # Dockerfile
 
@@ -346,14 +346,14 @@ docker build -t spring-project .
 docker run -p 8080:8080 spring-project
 
 # Explanation
-FROM amazoncorretto:8: Specifies the base image with Java 8.
-WORKDIR /app: Sets the working directory inside the container to /app.
-COPY .mvn/ .mvn and COPY mvnw pom.xml ./: Copies the Maven wrapper and configuration files needed to build the project.
-RUN ./mvnw dependency:go-offline: Pre-downloads dependencies to reduce build time.
-COPY src ./src: Copies the project source code into the container.
-RUN ./mvnw package: Builds the project using Maven.
-EXPOSE 8080: Exposes port 8080 on the container.
-CMD ["java", "-jar", "./target/docker-example-1.1.3.jar"]: Runs the built JAR file.
+- FROM amazoncorretto:8: Specifies the base image with Java 8.
+- WORKDIR /app: Sets the working directory inside the container to /app.
+- COPY .mvn/ .mvn and COPY mvnw pom.xml ./: Copies the Maven wrapper and configuration files needed to build the project.
+- RUN ./mvnw dependency:go-offline: Pre-downloads dependencies to reduce build time.
+- COPY src ./src: Copies the project source code into the container.
+- RUN ./mvnw package: Builds the project using Maven.
+- EXPOSE 8080: Exposes port 8080 on the container.
+- CMD ["java", "-jar", "./target/docker-example-1.1.3.jar"]: Runs the built JAR file.
 
 # on the browser
 
