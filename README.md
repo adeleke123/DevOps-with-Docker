@@ -143,3 +143,18 @@ $ docker run web-server
 - We don't have any method of accessing the web service yet.
 - As such confirming that the console output is the same will suffice.
 - The exercise title may be a useful hint here.
+
+**EXERCISE 1.9: VOLUMES**
+- In this exercise we won't create a new Dockerfile.
+- Image `devopsdockeruh/simple-web-service` creates a timestamp every two seconds to `/usr/src/app/text.log`
+- when it's not given a command. Start the container with a bind mount so that the logs are created into your filesystem.
+- Submit the command you used to complete the exercise.
+- Hint: read the note that was made just before this exercise!
+
+**EXERCISE 1.10: PORTS OPEN**
+- In this exercise, we won't create a new Dockerfile.
+- The image `devopsdockeruh/simple-web-service` will start a web service in port `8080` when given the argument "server".
+- In **Exercise 1.8** you already did an image that can be used to run the web service without any argument.
+- Use now the `-p` flag to access the contents with your browser.
+- The output to your browser should be something like: `{ message: "You connected to the following path: ...`
+- Submit your used commands for this exercise.
