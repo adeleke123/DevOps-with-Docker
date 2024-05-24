@@ -263,3 +263,13 @@ adeleke@machine:~/start$ sudo docker run web-server
 [GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
 
+EXERCISE 1.9: VOLUMES
+------------------------
+# Create the directory
+mkdir -p ~/logs
+
+# Run the Docker container with a bind mount
+# Command to Submit
+
+docker run -d -v ~/logs/text.log:/usr/src/app/text.log devopsdockeruh/simple-web-service
+
