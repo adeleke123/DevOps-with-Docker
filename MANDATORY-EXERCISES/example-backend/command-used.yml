@@ -5,7 +5,7 @@ git clone https://github.com/docker-hy/material-applications.git
 cd material-applications/example-backend
 
 # Create a Dockerfile:
-
+--------------------------------------------------
 # Use the official Golang image to build the app
 FROM golang:1.16 AS build
 
@@ -41,7 +41,7 @@ ENV PORT=8080
 
 # Command to run the application
 CMD ["./server"]
-
+-------------------------------------------------
 # Build the Docker Image:
 docker build --platform linux/amd64 -t example-backend .
 
@@ -49,9 +49,9 @@ docker build --platform linux/amd64 -t example-backend .
 # Run the Docker Container:
 docker run -p 8080:8080 example-backend
 
-# Verify by navigating to 
+# Verify by navigating to: 
 
-http://localhost:8080/ping in your web browser.
+http://localhost:8080/ping in the web browser.
 
 # Result:
 
