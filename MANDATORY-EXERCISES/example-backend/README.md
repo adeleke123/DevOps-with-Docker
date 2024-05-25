@@ -35,3 +35,8 @@ Server accepts the following environment variables:
   - `POSTGRES_USER` database user. Default: postgres
   - `POSTGRES_PASSWORD` database password. Default: postgres
   - `POSTGRES_DATABASE` database name. Default: postgres
+ 
+  # Task Output
+
+  ![Screenshot from 2024-05-25 13-06-35](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/a7284bbc-7477-4d85-9433-14734dc490f0)
+
