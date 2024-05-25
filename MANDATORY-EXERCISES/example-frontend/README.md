@@ -38,3 +38,8 @@ Test that the project is running by going to <http://localhost:5000>
 
 By default the expected path to backend is /api. This is where the application will send requests. 
 To manually configure api path run with `REACT_APP_BACKEND_URL` environment value set, for example `REACT_APP_BACKEND_URL=http://example.com npm run build`
+
+## Solution to the task 
+## Exercise 1.12 -> to run the project
+![Screenshot from 2024-05-25 12-19-37](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/d7f3ec66-a3da-4fe5-a7f0-e8dfe45ef30a)
+
