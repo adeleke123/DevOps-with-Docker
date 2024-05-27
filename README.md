@@ -1,4 +1,4 @@
-# DevOps-with-Docker
+![image](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/5c1c0d85-ddc2-4e38-918b-c4badf42cfa2)# DevOps-with-Docker
 
 **EXERCISE 1.1: GETTING STARTED**
 
@@ -214,12 +214,11 @@ _A good developer creates well-written READMEs. Such that they can be used to cr
 **MANDATORY EXERCISE 1.14: ENVIRONMENT**
 
 - Start both the frontend and the backend with the correct ports exposed and
-- add [ENV](https://docs.docker.com/reference/dockerfile/#env) to Dockerfile with
-- the necessary information from both READMEs
-- ([front](https://github.com/docker-hy/material-applications/tree/main/example-frontend), [back](https://github.com/docker-hy/material-applications/tree/main/example-backend)).
+- add [ENV](https://docs.docker.com/reference/dockerfile/#env) to Dockerfile with the necessary information from both READMEs ([front](https://github.com/docker-hy/material-applications/tree/main/example-frontend), [back](https://github.com/docker-hy/material-applications/tree/main/example-backend)).
 - Ignore the backend configurations until the frontend sends requests to `_backend_url_/ping` when you press the button.
 - You know that the configuration is ready when the button for 1.14 of frontend responds and turns green.
 - Do not alter the code of either project
 - Submit the edited Dockerfiles and commands used to run.
-
+![image](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/c3ae0f4d-317d-4ab2-a7fc-a3b14173c3da)
+![image](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/c3ae0f4d-317d-4ab2-a7fc-a3b14173c3da)
 
