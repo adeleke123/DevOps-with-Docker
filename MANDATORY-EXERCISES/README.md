@@ -4,6 +4,7 @@
 
 # project directory structure:
 
+```
 project-root/
 ├── backend/
 │   ├── Dockerfile
@@ -13,6 +14,7 @@ project-root/
 │   └── (other frontend files)
 └── docker-compose.yml
 
+```
 # Navigate to the project root directory:
 cd /path/to/project-root
 
