@@ -251,3 +251,5 @@ _A good developer creates well-written READMEs. Such that they can be used to cr
 - For this exercise to be complete you have to provide the link to the project in Docker Hub,
 - make sure you at least have a basic description and
 - instructions for how to run the application in a [README](https://help.github.com/en/articles/about-readmes) that's available through your submission.
+- [link to the docker repository](https://hub.docker.com/repository/docker/bakare1234844/node-app/general)
+- [link to the github repo](https://github.com/adeleke123/node-app)
