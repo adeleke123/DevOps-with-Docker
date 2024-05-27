@@ -210,3 +210,16 @@ _A good developer creates well-written READMEs. Such that they can be used to cr
 - you might need [this](https://docs.docker.com/reference/dockerfile/#env)
 - If you have M1/M2 Mac, you might need to build the image with
 - an extra option `docker build --platform linux/amd64 -t imagename .`
+
+**MANDATORY EXERCISE 1.14: ENVIRONMENT**
+
+- Start both the frontend and the backend with the correct ports exposed and
+- add [ENV](https://docs.docker.com/reference/dockerfile/#env) to Dockerfile with
+- the necessary information from both READMEs
+- ([front](https://github.com/docker-hy/material-applications/tree/main/example-frontend), [back](https://github.com/docker-hy/material-applications/tree/main/example-backend)).
+- Ignore the backend configurations until the frontend sends requests to `_backend_url_/ping` when you press the button.
+- You know that the configuration is ready when the button for 1.14 of frontend responds and turns green.
+- Do not alter the code of either project
+- Submit the edited Dockerfiles and commands used to run.
+
+
