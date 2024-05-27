@@ -227,7 +227,9 @@ _A good developer creates well-written READMEs. Such that they can be used to cr
 - Then the code will be executed from your browser and
 - that will send a message to the backend.
 
+
 ![image](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/b8ebc315-6131-40d1-8bad-84567df2146a)
+
 
 
 **TIPS:**
@@ -239,6 +241,5 @@ _A good developer creates well-written READMEs. Such that they can be used to cr
 - the most important ones are Console and Network.
 - Exploring the Network tab can give you a lot of information on where
 - messages are being sent and what is received as a response!
-![image](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/b8ebc315-6131-40d1-8bad-84567df2146a)
 
 
