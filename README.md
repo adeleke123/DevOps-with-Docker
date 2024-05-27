@@ -1,4 +1,4 @@
-![image](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/5c1c0d85-ddc2-4e38-918b-c4badf42cfa2)# DevOps-with-Docker
+# DevOps-with-Docker
 
 **EXERCISE 1.1: GETTING STARTED**
 
@@ -219,6 +219,7 @@ _A good developer creates well-written READMEs. Such that they can be used to cr
 - You know that the configuration is ready when the button for 1.14 of frontend responds and turns green.
 - Do not alter the code of either project
 - Submit the edited Dockerfiles and commands used to run.
+
 ![image](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/c3ae0f4d-317d-4ab2-a7fc-a3b14173c3da)
-![image](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/c3ae0f4d-317d-4ab2-a7fc-a3b14173c3da)
+
 
