@@ -1,35 +1,35 @@
-# Use the official Golang image to build the app
+# Use the official golang image to build the app
 FROM golang:1.16 AS build
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the go.mod and go.sum files
+# Copy go mod and sum files
 COPY go.mod go.sum ./
 
-# Download the dependencies
+# Download all dependencies
 RUN go mod download
 
 # Copy the source code into the container
 COPY . .
 
-# Build the application
-RUN go build -o server
+# Build the Go app with static linking
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o server .
 
-# Use a minimal base image to run the application
-FROM debian:bullseye-slim
+# Use a minimal base image to run the app
+FROM alpine:latest
 
-# Set the working directory inside the container
-WORKDIR /app
+# Set environment variables
+ENV PORT=8080
 
-# Copy the built binary from the build stage
-COPY --from=build /app/server .
+# Install ca-certificates
+RUN apk --no-cache add ca-certificates
+
+# Copy the binary from the build stage
+COPY --from=build /app/server /server
 
 # Expose the port on which the app will run
 EXPOSE 8080
-
-# Define environment variable for PORT
-ENV PORT=8080
 
 # Command to run the application
 CMD ["./server"]

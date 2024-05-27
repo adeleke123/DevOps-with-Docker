@@ -1,27 +1,32 @@
-# Use the Node.js 16 LTS image
-FROM node:16
+# Use the official Node.js image to build the app
+FROM node:16 AS build
 
-# Set the working directory
-WORKDIR /usr/src/app
+# Set the working directory inside the container
+WORKDIR /app
 
-# Copy package.json and package-lock.json (if available)
+# Copy the package.json and package-lock.json files
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the application code
+# Copy the source code into the container
 COPY . .
 
-# Build the project
+# Set backend URL environment variable using build argument
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
+
+# Build the application
 RUN npm run build
 
-# Install serve to serve the build files
-RUN npm install -g serve
+# Use a minimal base image to serve the app
+FROM nginx:alpine
 
-# Expose the application port
-EXPOSE 5000
+# Copy the build output to the Nginx HTML directory
+COPY --from=build /app/build /usr/share/nginx/html
 
-# Serve the build files
-CMD ["serve", "-s", "build", "-l", "5000"]
+# Expose the port on which the app will run
+EXPOSE 80
 
+# Command to run the application
+CMD ["nginx", "-g", "daemon off;"]

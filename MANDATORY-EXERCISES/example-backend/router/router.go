@@ -14,7 +14,6 @@ import (
 )
 
 func pingpong(context *gin.Context) {
-
 	redis := context.Query("redis") == "true"
 	postgres := context.Query("postgres") == "true"
 
@@ -42,7 +41,8 @@ func pingpong(context *gin.Context) {
 
 // Router is the gin server router
 func Router() *gin.Engine {
-	allowedOrigin := common.FallbackString(os.Getenv("REQUEST_ORIGIN"), "https://example.com")
+	// Allowing requests from localhost:5000
+	allowedOrigin := common.FallbackString(os.Getenv("REQUEST_ORIGIN"), "http://localhost:5000")
 
 	cacheErr := cache.InitializeRedisClient()
 	if cacheErr != nil {
@@ -54,11 +54,11 @@ func Router() *gin.Engine {
 	}
 
 	config := cors.DefaultConfig()
-
 	config.AllowOrigins = []string{allowedOrigin}
+	config.AllowHeaders = []string{"Origin", "Content-Type", "Accept", "Authorization"}
+	config.AllowMethods = []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"}
 
 	router := gin.Default()
-
 	router.Use(cors.New(config))
 
 	router.GET("/ping", pingpong)
@@ -70,6 +70,7 @@ func Router() *gin.Engine {
 		path := context.Request.URL.Path
 		context.String(404, "The only API of this app is /ping. Request received to path "+path+" and this resulted in 404.")
 	})
-	
+
 	return router
 }
+
