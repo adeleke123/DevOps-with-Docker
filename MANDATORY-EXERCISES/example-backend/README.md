@@ -40,3 +40,6 @@ Server accepts the following environment variables:
 
   ![Screenshot from 2024-05-25 13-06-35](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/a7284bbc-7477-4d85-9433-14734dc490f0)
 
+  ![Screenshot from 2024-05-27 11-39-31](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/34495c28-118b-4d72-8adf-bb90f1366c2d)
+
+
