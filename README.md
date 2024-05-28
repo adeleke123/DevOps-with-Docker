@@ -264,5 +264,6 @@ _A good developer creates well-written READMEs. Such that they can be used to cr
 - [fly.io](https://fly.io/) (easy to use but needs a credit card even in the free tier)
 - [render.com](https://render.com/) (bad documentation, you most likely need google)
 - [heroku.com](https://heroku.com/) (has a free student plan through [GitHub Student Developer Pack](https://www.heroku.com/github-students))
-- If you know a good cloud service for the purposes of this exercise, please tell us (yes, we know about Amazon AWS, Google Cloud and Azure already... ).
+- If you know a good cloud service for the purposes of this exercise,
+- please tell us (yes, we know about Amazon AWS, Google Cloud and Azure already... ).
 - Submit the Dockerfile, a brief description of what you did, and a link to the running app.
