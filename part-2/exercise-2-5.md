@@ -1,5 +1,7 @@
 I used this command `docker-compose up` to start the application
 
+cat docker-compose.yml:
+
 ```
 version: '3.2'
 services:
