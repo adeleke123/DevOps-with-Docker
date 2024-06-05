@@ -55,6 +55,7 @@
 
 
 
+- [The restart: unless-stopped configuration can help if the Redis takes a while to get ready.](https://docs.docker.com/compose/compose-file/compose-file-v3/#restart)
 
 **EXERCISE 2.5**
 - The project [https://github.com/docker-hy/material-applications/tree/main/scaling-exercise](https://github.com/docker-hy/material-applications/tree/main/scaling-exercise)
