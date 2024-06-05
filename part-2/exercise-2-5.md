@@ -1,5 +1,5 @@
-I used this command `docker-compose up` to start the application
-
+I used these command `docker-compose up` to start the application
+`docker compose up -d`
 cat docker-compose.yml:
 
 ```
