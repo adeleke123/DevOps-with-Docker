@@ -48,6 +48,14 @@
 - When you've correctly configured the button will turn green.
 - Submit the `docker-compose.yml`
 
+
+
+
+![image](https://github.com/adeleke123/DevOps-with-Docker/assets/51156057/232fac3e-aa5c-4c90-831b-bcbce6644b43)
+
+
+
+
 **EXERCISE 2.5**
 - The project [https://github.com/docker-hy/material-applications/tree/main/scaling-exercise](https://github.com/docker-hy/material-applications/tree/main/scaling-exercise)
 - is a barely working application. Go ahead and clone it for yourself.
